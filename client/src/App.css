@@ -1,125 +1,536 @@
 /* Reset & layout */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(to right, #eef2f3, #fdfefe);
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background-attachment: fixed;
+  color: #334155;
+  line-height: 1.6;
+}
+
+
+/* Name & Gender Info */
+.aadhaar-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+.aadhaar-info-grid div {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.aadhaar-info-grid span {
+  font-weight: bold;
   color: #333;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+/* Professional color scheme */
+:root {
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #2563eb;
+  --secondary: #64748b;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --border: #e2e8f0;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --shadow: rgba(15, 23, 42, 0.08);
 }
 
-/* Headings */
+/* Smooth animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Container styling */
+.container {
+  background: var(--background);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px var(--shadow);
+  padding: 2.5rem;
+  margin: 2rem auto;
+  max-width: 950px;
+  border: 1px solid var(--border);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Navbar - lighter and more professional */
+.navbar {
+  background: var(--background);
+  border-bottom: 2px solid var(--primary);
+  padding: 1.25rem 2rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.navbar h2 {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+/* Typography */
 h1 {
   text-align: center;
-  color: #2c3e50;
+  font-size: 2.25rem;
+  font-weight: 800;
   margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h2, h3 {
-  margin-top: 1rem;
-  color: #2c3e50;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 /* Sections */
 .section {
   margin-bottom: 2rem;
+  animation: slideIn 0.5s ease-out;
 }
 
+.section.card-style {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow);
+  margin-top: 1.5rem;
+}
+
+/* Form elements */
 label {
-  font-weight: 600;
-  color: #34495e;
   display: block;
-  margin-bottom: 0.5rem;
-}
-
-input[type="file"] {
-  padding: 0.5rem;
-  border-radius: 6px;
-  background: #fafafa;
-  border: 1px solid #ccc;
+  font-weight: 600;
   font-size: 0.95rem;
-  width: 100%;
-  max-width: 400px;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
 }
 
-/* Webcam preview */
+.section label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* File input styling */
+input[type="file"] {
+  padding: 1.25rem;
+  font-size: 1rem;
+  width: 100%;
+  background: var(--background);
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+  box-sizing: border-box;
+}
+
+input[type="file"]:hover {
+  background: var(--surface);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+/* Preview components */
 .preview-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .preview-box {
-  text-align: center;
+  background: var(--background);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.preview-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.preview-box.selected {
+  border-color: var(--primary);
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .preview {
   width: 220px;
   height: auto;
-  border: 3px solid #e0e0e0;
+  border: 2px solid var(--border);
   border-radius: 8px;
-  box-shadow: 0 0 8px #ddd;
   margin-top: 0.5rem;
+}
+
+/* Webcam components */
+.webcam-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #eff6ff, var(--background));
+  border: 2px solid #dbeafe;
+  box-shadow: 0 8px 20px var(--shadow);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.webcam-wrapper p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.webcam-box {
+  display: block;
+  position: relative;
+  border-radius: 16px;
+  border: 3px solid var(--primary);
+  background: #f0f4ff;
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.15);
+  transition: all 0.3s ease;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.webcam-box::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  background: var(--danger);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.webcam-box:hover {
+  transform: scale(1.02);
+  border-color: var(--primary-dark);
+}
+
+.webcam-box.flash {
+  animation: flashEffect 0.3s ease-in-out;
+}
+
+@keyframes flashEffect {
+  0% { box-shadow: 0 0 0 rgba(16, 185, 129, 0); }
+  50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.6); }
+  100% { box-shadow: 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+  transition: all 0.3s ease;
+  margin: 0.5rem 0;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.capture-btn {
+  background: linear-gradient(135deg, var(--success), #34d399);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+  margin-top: 1rem;
+}
+
+button.capture-btn:hover {
+  background: linear-gradient(135deg, #059669, var(--success));
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
 }
 
 /* Radio group */
 .radio-group {
   display: flex;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
+  gap: 2rem;
+  margin-top: 1rem;
   font-weight: 500;
 }
 
-/* Button */
-button {
-  background: #007bff;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  padding: 0.8rem 1.6rem;
-  margin: 1.5rem auto 1rem;
-  display: block;
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-button:hover {
-  background: #0056b3;
+.radio-group input[type="radio"] {
+  accent-color: var(--primary);
+  transform: scale(1.2);
 }
 
-/* Result box */
-.result {
-  background: #f0f9ff;
-  padding: 1.5rem;
-  border-left: 6px solid #3498db;
-  border-radius: 12px;
-  margin-top: 2rem;
-}
-
-.result p {
-  font-size: 1.1rem;
-  margin: 0.4rem 0;
-}
-
-/* Aadhaar Info styled display */
-.aadhaar-info {
-  background: #ecf0f1;
-  padding: 1rem 1.2rem;
+/* Progress bar */
+.progress-container {
+  width: 100%;
+  background: var(--border);
+  border-radius: 50px;
+  height: 12px;
   margin-top: 1rem;
-  border-radius: 8px;
+  overflow: hidden;
 }
 
-.aadhaar-info p {
-  margin: 0.4rem 0;
-  font-size: 1.05rem;
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-radius: 50px;
+  transition: width 0.4s ease;
 }
+
+.progress-message {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-top: 0.75rem;
+}
+
+/* Results section */
+.result {
+  background: linear-gradient(135deg, #f0f9ff, var(--background));
+  padding: 2rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  box-shadow: 0 8px 20px var(--shadow);
+  border-left: 4px solid var(--primary);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.result h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+/* Status cards */
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.status-card {
+  background: var(--background);
+  border-radius: 12px;
+  padding: 1.25rem;
+  border: 2px solid var(--border);
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.status-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--shadow);
+}
+
+.status-card.yes {
+  border-color: var(--success);
+  background: linear-gradient(135deg, #ecfdf5, var(--background));
+}
+
+.status-card.no {
+  border-color: var(--danger);
+  background: linear-gradient(135deg, #fef2f2, var(--background));
+}
+
+.status-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.status-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.status-card.yes p {
+  color: var(--success);
+}
+
+.status-card.no p {
+  color: var(--danger);
+}
+
+/* Age verification box */
+.age-box {
+  padding: 1.25rem;
+  border-radius: 12px;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.age-box.valid {
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+  color: var(--success);
+  border: 2px solid #bbf7d0;
+}
+
+.age-box.invalid {
+  background: linear-gradient(135deg, #fef2f2, #fef7f7);
+  color: var(--danger);
+  border: 2px solid #fecaca;
+}
+
+/* Aadhaar info grid */
+.aadhaar-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.aadhaar-info-grid div {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
+
+.aadhaar-info-grid span {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .aadhaar-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Focus states for accessibility */
+button:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Utility classes */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
