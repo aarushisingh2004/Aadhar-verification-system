@@ -69,6 +69,25 @@ SSE-powered updates showing OCR, embedding & similarity processing
 ![Results](./step3.jpg)
 
 ---
+---
+
+## 🌐 Multilingual Aadhaar Support
+
+Many Aadhaar cards include text in Hindi or other regional languages. Our OCR pipeline handles this seamlessly:
+
+- 🧾 Detects and extracts info even when text is in **Devanagari script** (like Hindi)
+- 🌐 Uses **Tesseract language packs** and smart regex logic
+- 🔄 Translates / normalizes extracted text to English for further processing
+
+📸 **Example:**
+> Aadhaar name in Hindi (`आरुषि सिंह`) → Parsed as `Aarushi Singh`  
+> Gender `महिला` → Recognized as `Female`  
+> DOB in any script → Extracted as `15/08/2004`
+
+✅ This makes **VeriFace** robust across diverse Aadhaar formats used across India.
+
+![Hindi Aadhaar OCR](./text.jpg)
+> OCR working on Hindi Aadhaar card with successful translation + extraction
 
 ## 🧑‍💻 Tech Stack
 
