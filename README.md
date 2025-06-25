@@ -31,10 +31,9 @@ VeriFace checks if a person is:
 
 ## 📽️ Demo Video
 
-🎥 Click to watch VeriFace in action:
-[![Watch the demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
+🎥 Click to watch VeriFace in action:  
+[![Watch the demo](https://img.youtube.com/vi/QztANWQiN8U/0.jpg)](https://www.youtube.com/watch?v=QztANWQiN8U)
 
-> *(Replace `YOUTUBE_VIDEO_ID` with your actual YouTube ID)*
 
 ---
 
