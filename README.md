@@ -100,6 +100,7 @@ To make verification results more transparent, VeriFace shows:
 - 📘 This adds **interpretability** and makes the result **more trustworthy** in real-world cases
 
 > 🔍 Useful for edge cases and debugging borderline matches
+
 ![FaceNet Diagram](./facenet.jpg)
 ## 💡 Smart Feedback on Selfie Quality
 
