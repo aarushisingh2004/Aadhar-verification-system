@@ -99,6 +99,18 @@ To ensure accurate face verification, **VeriFace** gives live feedback on selfie
 - 📸 Prompts user to retake selfie for best results
 
 ✅ This ensures we only process **high-quality face images** for accurate comparison.
+---
+
+## 🔐 Security & Privacy Features
+
+We care about user safety and data confidentiality. VeriFace is designed with **privacy-first architecture**:
+
+- 🧠 **No third-party API calls** — all AI processing (OCR, face match, age check) is done **fully offline**
+- 🖼️ Images and Aadhaar data are **never uploaded** to external servers
+- 💾 **No database** — session is stateless; data is stored **only in memory**
+- 🧹 All files are deleted after verification completes
+
+> ✅ Ensures Aadhaar and face data stays **completely private and local**
 
 ## 🧑‍💻 Tech Stack
 
