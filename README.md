@@ -36,6 +36,17 @@ VeriFace checks if a person is:
 
 
 ---
+## 🗂️ Project Resources
+
+All key materials — including our pitch deck, documentation, and demo video — are available in the shared Drive folder:
+
+🔗 **[📁 Google Drive: VeriFace Assets](https://drive.google.com/drive/folders/1rOUPM85Hm6vniYlbGFKGuyLIAeotO0RX)**
+
+Contents:
+- 📄 Project Report (DOCX)
+- 📊 Final PPT Presentation
+- 🎥 Demo Video (HD)
+- 🖼️ Screenshots & UI Assets
 
 ## 🖼️ UI Walkthrough — Step-by-Step
 
