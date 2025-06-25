@@ -89,6 +89,17 @@ Many Aadhaar cards include text in Hindi or other regional languages. Our OCR pi
 ![Tamil Aadhaar OCR](./text.jpg)
 > OCR working on Tamil Aadhaar card with successful translation + extraction
 ---
+---
+
+## 📊 Smart Confidence Score Display
+
+To make verification results more transparent, VeriFace shows:
+
+- 🔢 **Numerical match score** between Aadhaar and Selfie (e.g. `✔️ 87.5% Match`)
+- 📉 Even if not a perfect match, users can see how close the comparison was (e.g. `⚠️ 33% - likely mismatch`)
+- 📘 This adds **interpretability** and makes the result **more trustworthy** in real-world cases
+
+> 🔍 Useful for edge cases and debugging borderline matches
 
 ## 💡 Smart Feedback on Selfie Quality
 
