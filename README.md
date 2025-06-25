@@ -41,7 +41,7 @@ VeriFace checks if a person is:
 
 ### 🪪 Step 1: Upload Aadhaar
 
-![Step 1](./step1.jpg)
+![Step 1](./step.jpg)
 
 ### 📸 Step 2: Capture or Upload Selfie
 
