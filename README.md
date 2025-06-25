@@ -11,6 +11,21 @@
 Real-time face match and age verification using Aadhaar + Selfie. Built with ❤️ using the **MERN stack** + **Python AI backend**.
 
 ---
+---
+
+## 📽️ Demo Video
+
+🎥 Click to watch VeriFace in action:  
+[![Watch the demo](https://img.youtube.com/vi/QztANWQiN8U/0.jpg)](https://www.youtube.com/watch?v=QztANWQiN8U)
+
+
+---
+## 🗂️ Project Resources
+
+All key materials — including our pitch deck, documentation, and demo video — are available in the shared Drive folder:
+
+🔗 **[📁 Google Drive: VeriFace Assets](https://drive.google.com/drive/folders/1rOUPM85Hm6vniYlbGFKGuyLIAeotO0RX)**
+
 
 ## 🧠 Overview
 
@@ -27,20 +42,6 @@ VeriFace checks if a person is:
 * 🎥 React UI with webcam integration
 * 🧠 AI-powered backend (PyTorch + Python + Node)
 
----
-
-## 📽️ Demo Video
-
-🎥 Click to watch VeriFace in action:  
-[![Watch the demo](https://img.youtube.com/vi/QztANWQiN8U/0.jpg)](https://www.youtube.com/watch?v=QztANWQiN8U)
-
-
----
-## 🗂️ Project Resources
-
-All key materials — including our pitch deck, documentation, and demo video — are available in the shared Drive folder:
-
-🔗 **[📁 Google Drive: VeriFace Assets](https://drive.google.com/drive/folders/1rOUPM85Hm6vniYlbGFKGuyLIAeotO0RX)**
 
 Contents:
 - 📄 Project Report (DOCX)
