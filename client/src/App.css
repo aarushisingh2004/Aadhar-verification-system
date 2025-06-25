@@ -1,0 +1,125 @@
+/* Reset & layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to right, #eef2f3, #fdfefe);
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+h2, h3 {
+  margin-top: 1rem;
+  color: #2c3e50;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 2rem;
+}
+
+label {
+  font-weight: 600;
+  color: #34495e;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="file"] {
+  padding: 0.5rem;
+  border-radius: 6px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Webcam preview */
+.preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.preview-box {
+  text-align: center;
+}
+
+.preview {
+  width: 220px;
+  height: auto;
+  border: 3px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #ddd;
+  margin-top: 0.5rem;
+}
+
+/* Radio group */
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* Button */
+button {
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.6rem;
+  margin: 1.5rem auto 1rem;
+  display: block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Result box */
+.result {
+  background: #f0f9ff;
+  padding: 1.5rem;
+  border-left: 6px solid #3498db;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.result p {
+  font-size: 1.1rem;
+  margin: 0.4rem 0;
+}
+
+/* Aadhaar Info styled display */
+.aadhaar-info {
+  background: #ecf0f1;
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.aadhaar-info p {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+}
