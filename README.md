@@ -253,6 +253,17 @@ if emb.size == 512:
 ```
 
 ---
+## 📦 Dependencies
+
+### React (Frontend)
+- react, react-dom, react-webcam, react-toastify
+
+### Node.js (Backend)
+- express, multer, cors
+
+### Python (AI Scripts)
+- facenet-pytorch, MTCNN, torch, numpy, scipy
+- opencv-python, tesserocr, pillow
 
 ## 🏁 What We Achieved
 
