@@ -86,8 +86,8 @@ Many Aadhaar cards include text in Hindi or other regional languages. Our OCR pi
 
 ✅ This makes **VeriFace** robust across diverse Aadhaar formats used across India.
 
-![Hindi Aadhaar OCR](./text.jpg)
-> OCR working on Hindi Aadhaar card with successful translation + extraction
+![Tamil Aadhaar OCR](./text.jpg)
+> OCR working on Tamil Aadhaar card with successful translation + extraction
 
 ## 🧑‍💻 Tech Stack
 
