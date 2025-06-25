@@ -41,20 +41,20 @@ VeriFace checks if a person is:
 
 ### 🪪 Step 1: Upload Aadhaar
 
-![Step 1](./assets/step1.jpg)
+![Step 1](./step1.jpg)
 
 ### 📸 Step 2: Capture or Upload Selfie
 
-![Step 2](./assets/step2.jpg)
+![Step 2](./step2.jpg)
 
 ### ⏳ Step 3: Live Verification Progress
 
 SSE-powered updates showing OCR, embedding & similarity processing
-![Progress](./assets/progress.jpg)
+![Progress](./progress.jpg)
 
 ### ✅ Step 4: Click Verify and View Results
 
-![Results](./assets/step3.jpg)
+![Results](./step3.jpg)
 
 ---
 
