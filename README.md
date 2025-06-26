@@ -65,8 +65,9 @@ SSE-powered updates showing OCR, embedding & similarity processing
 ![Progress](./progress.jpg)
 
 ### ✅ Step 4: Click Verify and View Results
+![image](https://github.com/user-attachments/assets/3261e6a8-9206-457b-92db-d96081dd8034)
 
-![Results](./step3.jpg)
+
 
 ---
 ---
