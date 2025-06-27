@@ -59,7 +59,7 @@ function App() {
     formData.append('selfie', selfieToUse);
 
     try {
-      const uploadRes = await fetch('http://localhost:5000/api/users/upload', {
+      const uploadRes = await fetch('https://aadhar-verification-system.onrender.com/api/users/upload', {
         method: 'POST',
         body: formData,
       });
@@ -69,7 +69,7 @@ function App() {
         throw new Error("Upload failed");
       }
 
-      const sseUrl = `http://localhost:5000/api/users/verify-face-sse?aadhaarPath=${encodeURIComponent(uploadData.aadhaarPath)}&selfiePath=${encodeURIComponent(uploadData.selfiePath)}`;
+      const sseUrl = `https://aadhar-verification-system.onrender.com/api/users/verify-face-sse?aadhaarPath=${encodeURIComponent(uploadData.aadhaarPath)}&selfiePath=${encodeURIComponent(uploadData.selfiePath)}`;
       const eventSource = new EventSource(sseUrl);
 
       eventSource.onmessage = (event) => {
